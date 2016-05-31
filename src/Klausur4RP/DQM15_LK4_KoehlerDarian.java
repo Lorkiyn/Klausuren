@@ -121,7 +121,6 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 		textFieldAmount = new JTextField();
 		textFieldAmount.setToolTipText("Anzahl der Eis Kugeln");
 		textFieldAmount.addKeyListener(new KeyListener() {
-
 			@Override
 			public void keyTyped(KeyEvent e) {
 				//Überprüft ob die Eingabe eine Zahl ist
