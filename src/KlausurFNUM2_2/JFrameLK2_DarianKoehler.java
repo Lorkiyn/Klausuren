@@ -21,7 +21,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
-import org.eclipse.wb.swing.FocusTraversalOnArray;
 
 public class JFrameLK2_DarianKoehler extends JFrame {
 
@@ -185,7 +184,6 @@ public class JFrameLK2_DarianKoehler extends JFrame {
 			}
 		});
 		verticalBox.add(btnExit);
-		panelTools.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{tfVarA, tfVarB, tfVarC, tfVarD}));
 	}
 	
 	private double calculate(double x0, double x1) {
