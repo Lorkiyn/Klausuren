@@ -128,7 +128,7 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 				char caracter = e.getKeyChar();
 				if (((caracter < '0') || (caracter > '9')) && (caracter != '\b')) {
 					e.consume();
-					
+
 				}
 				calculate();
 
@@ -277,9 +277,9 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				print();
-				
+
 			}
-			
+
 		});
 		buttonGo.setBounds(10, 15, 298, 23);
 		panelOut.add(buttonGo);
@@ -291,15 +291,15 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				delete();
-				
+
 			}
-			
+
 		});
 		buttonUndo.setBounds(10, 46, 298, 23);
 		panelOut.add(buttonUndo);
 	}
 
-	
+
 	/* Erstellt den Array für die ComboBox */
 	private String[] getComboBoxData() {
 		String[] data = new String[3];
@@ -311,7 +311,7 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 
 	}
 
-	
+
 	/* Gibt die jevalige Mehrwertssteuer zurück und ändert die MwSt. im Label */
 	private double getTax() {
 		if (checkBoxOutOfHouse.isSelected()) {
@@ -326,27 +326,27 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 
 	}
 
-	
+
 	/* Berechnung der Werte */
 	private void calculate() {
 		NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
-		
+
 		/* Setzt den amount Wert, try/catch weil wenn der wert nicht einer Zahl entspricht das das Programm sich nicht beendet */
 		try {
 			amount = Integer.parseInt(textFieldAmount.getText().trim());
 
 		} catch (NumberFormatException e) {
 			if (textFieldAmount.getText().length() > 0)
-			JOptionPane.showMessageDialog(null, "Fehlerhafte Eingabe bitte überprüfen sie die Eingabe auf nicht Nummerische zeichen.", "Eingabeferhler", 0);
+				JOptionPane.showMessageDialog(null, "Fehlerhafte Eingabe bitte überprüfen sie die Eingabe auf nicht Nummerische zeichen.", "Eingabeferhler", 0);
 
 		}
 
-		
+
 		/* Bestimmt den Brutto preis auf basis der Anzahl der Eiskugeln */
 		brutto = amount * PRICE;
 
-		
+
 		/* Überprüft den ausgewählten Index der ComboBox und handelt dementsprechend */
 		switch(comboBoxType.getSelectedIndex()) {
 		case 0:
@@ -369,7 +369,7 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 
 		}
 
-		
+
 		/* Überprüft ob CheckBoxen ausgewählt sind und handelt dementsprechend */
 		if (checkBoxSahne.isSelected()) {
 			brutto += SAHNE;
@@ -386,29 +386,29 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 
 		}
 
-		
+
 		/* Berechnung der Steuern und Netto */
 		netto = brutto;
 		tax = (brutto * getTax()) / (100 +getTax());
 		netto -= tax;
 
-		
+
 		/* Setzt die Werte in die Lables ein */
 		if (textFieldAmount.getText().length() > 0 ) {
 			labelNetto.setText(formatter.format(netto));
 			labelTax.setText(formatter.format(tax));
 			labelBrutto.setText(formatter.format(brutto));
-		
+
 		} else {
 			labelNetto.setText("0.00 €");
 			labelTax.setText("0.00 €");
 			labelBrutto.setText("0.00 €");
-			
+
 		}
 
 	}
-	
-	
+
+
 	/* Setzt die Werte zurück */
 	private void delete() {
 		textFieldAmount.setText("");
@@ -417,15 +417,15 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 		checkBoxStreusel.setSelected(false);
 		checkBoxKrokant.setSelected(false);
 		checkBoxOutOfHouse.setSelected(false);
-		
+
 		labelNetto.setText("0.00 €");
 		labelTax.setText("0.00 €");
 		labelBrutto.setText("0.00 €");
 		getTax();
-		
+
 	}
-	
-	
+
+
 	/* Gibt den "Bong" aus */
 	private void print() {
 		if (textFieldAmount.getText().length() > 0) {
@@ -451,12 +451,12 @@ public class DQM15_LK4_KoehlerDarian extends JFrame {
 			System.out.println("MwSt. " +getTax() +"%: " +formatter.format(tax));
 			System.out.println("===================");
 			System.out.println("Brutto: " +formatter.format(brutto));
-			
+
 		} else {
 			return;
-			
+
 		}
-		
+
 	}
-	
+
 }
