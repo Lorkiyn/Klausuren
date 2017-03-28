@@ -1,4 +1,4 @@
-package KlausurFNUM2_2;
+package fnum.lk.test2;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

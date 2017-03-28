@@ -1,5 +1,5 @@
 /* Darian Köhler */
-package Klausur4RP;
+package rp.test4;
 
 import java.awt.Color;
 import java.awt.EventQueue;

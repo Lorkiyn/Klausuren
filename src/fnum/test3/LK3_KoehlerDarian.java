@@ -1,4 +1,4 @@
-package FKlausur3;
+package fnum.test3;
 
 import java.util.Scanner;
 

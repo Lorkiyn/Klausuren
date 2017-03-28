@@ -1,4 +1,4 @@
-package KlausurFNUM2_1;
+package fnum.lk.test1;
 
 import java.util.Scanner;
 

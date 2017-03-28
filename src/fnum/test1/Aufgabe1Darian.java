@@ -1,5 +1,5 @@
 //Aufgabe 1 Darian
-package FKlausur1;
+package fnum.test1;
 
 import java.util.Scanner;
 

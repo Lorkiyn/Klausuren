@@ -1,4 +1,4 @@
-package Klausur3;
+package rp.test3;
 
 import java.util.ArrayList;
 

@@ -1,5 +1,5 @@
 /* Darian Köhler */
-package FNUM_LK_4;
+package fnum.test4;
 
 import java.io.BufferedReader;
 import java.io.IOException;

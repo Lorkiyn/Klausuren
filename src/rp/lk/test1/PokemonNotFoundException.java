@@ -1,4 +1,4 @@
-package RP0201;
+package rp.lk.test1;
 
 public class PokemonNotFoundException extends Exception {
 
