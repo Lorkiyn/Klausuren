@@ -18,6 +18,7 @@ public class Aufgabe1Darian {
 		double q = 1+p;
 		double rn = r * Math.pow(q, n)-1 / q-1;
 		
-		System.out.println("Ergebniss: " +rn);}
-
+		System.out.println("Ergebniss: " +rn);
+		sc.close();
+	}
 }

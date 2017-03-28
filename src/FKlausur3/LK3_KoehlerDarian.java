@@ -30,6 +30,7 @@ public class LK3_KoehlerDarian {
 				+"\nDie Kovarianz ist: " +berechneKovarianz(x, y)
 				+"\nDer Regressionskoeffizient A ist: " +berechneRegB(x, y)
 				+"\nDer Regressionskoeffizient B ist: " +berechneRegA(x, y));
+		sc.close();
 
 	}
 

@@ -153,6 +153,7 @@ public class PokemonDaoTest {
 		// Test PokemonDao getPokemonWithMaxFeature() negative
 		System.out.print("PokemonDao getPokemonWithMaxFeature() negative...           ");
 		try {
+			@SuppressWarnings("unused")
 			Pokemon bestPokemon = pokemonDao.getPokemonWithMaxFeature("name");
 			System.out.println("failed");
 		} catch (PokemonFeatureNotFoundException exception) {
@@ -177,6 +178,7 @@ public class PokemonDaoTest {
 		// Test PokemonDao getPokemonsWithFeatureAboveAverage() negative
 		System.out.print("PokemonDao getPokemonsWithFeatureAboveAverage() negative... ");
 		try {
+			@SuppressWarnings("unused")
 			ArrayList<Pokemon> betterPokemons = pokemonDao.getPokemonsWithFeatureAboveAverage("name");			
 			System.out.println("failed");
 		} catch (PokemonFeatureNotFoundException exception) {
