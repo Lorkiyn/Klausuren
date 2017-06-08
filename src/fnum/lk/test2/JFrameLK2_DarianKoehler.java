@@ -216,11 +216,10 @@ public class JFrameLK2_DarianKoehler extends JFrame {
 			b = Double.parseDouble(tfVarB.getText());
 			c = Double.parseDouble(tfVarC.getText());
 			d = Double.parseDouble(tfVarD.getText());
+			repaint();
 		} catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(this, "Eingabe nicht Korrekt, bitte überprüfen.");
 		}
-		
-		repaint();
 	}
 	
 	private double f(double x) {
